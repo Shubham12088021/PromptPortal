@@ -1,0 +1,95 @@
+.playground-section{
+  padding:80px 20px;
+  background:linear-gradient(90deg,#4c1d95,#312e81,#1e3a8a);
+  color:white;
+}
+
+.playground-container{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+/* LEFT TEXT */
+
+.playground-text h2{
+  font-size:40px;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+.playground-text p{
+  color:#d1d5db;
+  font-size:18px;
+  margin-bottom:25px;
+}
+
+.playground-btn{
+  padding:12px 28px;
+  background:#facc15;
+  border:none;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.playground-btn:hover{
+  background:#eab308;
+  transform:scale(1.05);
+}
+
+/* RIGHT CARD */
+
+.playground-card{
+  background:rgba(0,0,0,0.5);
+  padding:25px;
+  border-radius:12px;
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(168,85,247,0.2);
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.playground-card-header{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#c084fc;
+  margin-bottom:12px;
+}
+
+.label{
+  color:#9ca3af;
+  margin-bottom:5px;
+}
+
+.prompt-box{
+  background:black;
+  padding:12px;
+  border-radius:6px;
+  color:#22c55e;
+  font-size:14px;
+}
+
+.response-box{
+  background:black;
+  padding:12px;
+  border-radius:6px;
+  color:#e5e7eb;
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* responsive */
+
+@media(max-width:900px){
+
+.playground-container{
+  grid-template-columns:1fr;
+  text-align:center;
+}
+
+}

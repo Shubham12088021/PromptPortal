@@ -1,4 +1,5 @@
 import DocsLayout from "../components/DocsLayout";
+import "./Techniques.css";
 
 function Techniques() {
 
@@ -42,38 +43,31 @@ and explain recursion.`
 
     <DocsLayout>
 
-      <div className="p-10 max-w-6xl mx-auto">
+      <div className="techniques-container">
 
-        {/* Page Heading */}
+        {/* Heading */}
 
-        <h1 className="text-3xl font-bold mb-10">
+        <h1 className="techniques-title">
           Core Prompt Techniques
         </h1>
 
-
         {/* Cards */}
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="techniques-grid">
 
           {techniques.map((t, i) => (
 
-            <div
-              key={i}
-              className="bg-white dark:bg-gray-900 border border-gray-200
-              rounded-xl p-6 shadow-md hover:shadow-xl
-              transition hover:-translate-y-1
-              hover:border-purple-500"
-            >
+            <div key={i} className="technique-card">
 
-              <h2 className="text-lg font-semibold mb-2 text-purple-600">
+              <h2 className="technique-heading">
                 {t.title}
               </h2>
 
-              <p className="text-gray-600 text-sm mb-4">
+              <p className="technique-desc">
                 {t.desc}
               </p>
 
-              <pre className="bg-gray-100 p-3 rounded-md text-sm font-mono text-gray-700 overflow-x-auto">
+              <pre className="technique-code">
                 {t.example}
               </pre>
 
@@ -83,20 +77,19 @@ and explain recursion.`
 
         </div>
 
-
         {/* Example Section */}
 
-        <div className="mt-16">
+        <div className="example-section">
 
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="example-title">
             Example Prompt
           </h2>
 
-          <p className="text-gray-600 mb-6">
+          <p className="example-desc">
             Example combining role prompting and step-by-step reasoning.
           </p>
 
-          <pre className="bg-black text-green-400 p-6 rounded-xl font-mono text-sm shadow-lg whitespace-pre-wrap">
+          <pre className="example-code">
 
 {`You are a senior data analyst.
 

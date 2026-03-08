@@ -1,14 +1,16 @@
+import "./TableOfContents.css";
+
 function TableOfContents(){
 
 return(
 
-<div className="bg-purple-50 border border-purple-200 p-5 rounded-lg mb-8">
+<div className="toc-box">
 
-<h3 className="font-bold mb-3 text-purple-700">
+<h3 className="toc-title">
 Table of Contents
 </h3>
 
-<ul className="list-disc ml-6 space-y-1 text-gray-700">
+<ul className="toc-list">
 
 <li>What is Prompt Engineering</li>
 <li>Why it is important</li>

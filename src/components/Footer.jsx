@@ -1,52 +1,82 @@
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import "./Footer.css";
 
 function Footer(){
 
 return(
 
-<footer className="bg-gray-900 text-white py-12">
+<footer className="footer">
 
-<div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+<div className="footer-container">
 
-<div>
+{/* BRAND */}
 
-<h2 className="text-xl font-bold mb-3 text-purple-400">
+<div className="footer-brand">
+
+<h2 className="footer-logo">
 PromptPortal
 </h2>
 
-<p className="text-gray-400">
+<p>
 Learn prompt engineering and build smarter AI interactions.
 </p>
 
 </div>
 
-<div>
 
-<h3 className="font-semibold mb-3">
-Resources
-</h3>
+{/* QUICK LINKS */}
 
-<ul className="space-y-2 text-gray-400">
+<div className="footer-links">
 
-<li className="hover:text-white cursor-pointer">Documentation</li>
-<li className="hover:text-white cursor-pointer">Examples</li>
-<li className="hover:text-white cursor-pointer">Playground</li>
+<h3>Quick Links</h3>
+
+<ul>
+
+<li>Home</li>
+<li>Documentation</li>
+<li>Examples</li>
+<li>Playground</li>
 
 </ul>
 
 </div>
 
-<div>
 
-<h3 className="font-semibold mb-3">
-Connect
-</h3>
+{/* SOCIAL */}
 
-<div className="flex gap-4 text-xl">
+<div className="footer-social">
 
-<FaGithub className="hover:text-purple-400 cursor-pointer"/>
-<FaLinkedin className="hover:text-purple-400 cursor-pointer"/>
-<FaTwitter className="hover:text-purple-400 cursor-pointer"/>
+<h3>Connect</h3>
+
+<div className="social-icons">
+
+<FaGithub/>
+<FaLinkedin/>
+<FaTwitter/>
+
+</div>
+
+</div>
+
+
+{/* NEWSLETTER */}
+
+<div className="footer-newsletter">
+
+<h3>Newsletter</h3>
+
+<p>Get AI updates and prompt tips.</p>
+
+<div className="newsletter-box">
+
+<input
+type="email"
+placeholder="Your email"
+/>
+
+<button>
+Subscribe
+</button>
 
 </div>
 
@@ -54,8 +84,11 @@ Connect
 
 </div>
 
-<div className="text-center text-gray-500 mt-8 text-sm">
+
+<div className="footer-bottom">
+
 © 2026 PromptPortal • Built with React
+
 </div>
 
 </footer>

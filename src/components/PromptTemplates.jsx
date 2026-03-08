@@ -1,4 +1,5 @@
 import { FaPenNib, FaCode, FaLightbulb } from "react-icons/fa";
+import "./PromptTemplates.css";
 
 function PromptTemplates(){
 
@@ -22,32 +23,29 @@ desc:"Create innovative ideas for startups, apps, and projects."
 
 return(
 
-<section className="bg-gray-100 py-20">
+<section className="templates-section">
 
-<div className="max-w-6xl mx-auto px-6">
+<div className="templates-container">
 
-<h2 className="text-3xl font-bold text-center mb-12">
+<h2 className="templates-title">
 Popular Prompt Templates
 </h2>
 
-<div className="grid md:grid-cols-3 gap-8">
+<div className="templates-grid">
 
 {templates.map((item,i)=>(
 
-<div key={i}
-className="p-6 bg-white rounded-xl shadow-md
-hover:shadow-2xl hover:-translate-y-2
-transition duration-300 cursor-pointer">
+<div key={i} className="template-card">
 
-<div className="text-purple-600 mb-3">
+<div className="template-icon">
 {item.icon}
 </div>
 
-<h3 className="text-xl font-bold mb-2">
+<h3 className="template-title">
 {item.title}
 </h3>
 
-<p className="text-gray-600">
+<p className="template-desc">
 {item.desc}
 </p>
 

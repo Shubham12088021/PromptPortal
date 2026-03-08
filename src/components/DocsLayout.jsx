@@ -1,14 +1,15 @@
 import Sidebar from "./Sidebar";
+import "./DocsLayout.css";
 
 function DocsLayout({ children }) {
 
   return (
 
-    <div className="flex max-w-7xl mx-auto gap-8">
+    <div className="docs-layout">
 
       <Sidebar />
 
-      <div className="flex-1 p-10">
+      <div className="docs-content">
         {children}
       </div>
 

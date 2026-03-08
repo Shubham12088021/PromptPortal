@@ -1,14 +1,16 @@
+import "./ArticleLayout.css";
+
 function ArticleLayout({ title, children }) {
 
   return (
 
-    <div className="max-w-4xl mx-auto px-6 py-10">
+    <div className="article-container">
 
-      <h1 className="text-4xl font-bold mb-6 text-purple-700">
+      <h1 className="article-title">
         {title}
       </h1>
 
-      <div className="prose prose-lg max-w-none prose-purple">
+      <div className="article-content">
         {children}
       </div>
 

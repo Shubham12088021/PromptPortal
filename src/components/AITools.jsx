@@ -1,4 +1,5 @@
 import { FaRobot, FaImage, FaCode, FaBrain } from "react-icons/fa";
+import "./AITools.css";
 
 function AITools() {
 
@@ -11,30 +12,25 @@ function AITools() {
 
   return (
 
-    <section className="py-20 bg-gradient-to-b from-gray-100 to-gray-200">
+    <section className="ai-tools-section">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="ai-tools-container">
 
-        <h2 className="text-3xl font-bold text-center mb-12">
+        <h2 className="ai-tools-title">
           Popular AI Tools
         </h2>
 
-        <div className="grid md:grid-cols-4 gap-8 text-center">
+        <div className="ai-tools-grid">
 
           {tools.map((tool, index) => (
 
-            <div
-              key={index}
-              className="p-8 bg-white rounded-xl shadow-md
-              hover:shadow-2xl hover:-translate-y-2
-              transition duration-300 cursor-pointer"
-            >
+            <div key={index} className="ai-tool-card">
 
-              <div className="flex justify-center mb-4 text-purple-600">
+              <div className="ai-tool-icon">
                 {tool.icon}
               </div>
 
-              <h3 className="font-semibold text-lg">
+              <h3 className="ai-tool-name">
                 {tool.name}
               </h3>
 
@@ -52,4 +48,4 @@ function AITools() {
 
 }
 
-export default AITools
+export default AITools;

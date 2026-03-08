@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import "./App.css";
 
 import Navbar from "./components/Navbar";
 import CommandPalette from "./components/CommandPalette";
@@ -26,7 +27,7 @@ function App() {
         <CommandPalette />
 
         {/* Pages */}
-        <div className="pt-20">
+        <div className="app-content">
 
           <Routes>
 
@@ -40,7 +41,7 @@ function App() {
 
         </div>
 
-        {/* Footer appears on all pages */}
+        {/* Footer */}
         <Footer />
 
     </BrowserRouter>

@@ -1,3 +1,5 @@
+import "./Stats.css";
+
 function Stats(){
 
 const stats=[
@@ -8,20 +10,19 @@ const stats=[
 
 return(
 
-<section className="py-20 bg-white">
+<section className="stats-section">
 
-<div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 text-center gap-10">
+<div className="stats-container">
 
 {stats.map((s,i)=>(
 
-<div key={i}
-className="p-6 rounded-xl hover:shadow-xl transition">
+<div key={i} className="stats-card">
 
-<h3 className="text-4xl font-bold text-purple-600">
+<h3 className="stats-value">
 {s.value}
 </h3>
 
-<p className="text-gray-600 mt-2">
+<p className="stats-label">
 {s.label}
 </p>
 

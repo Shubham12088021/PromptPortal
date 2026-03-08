@@ -1,34 +1,36 @@
+import "./Roadmap.css";
+
 function Roadmap(){
 
 const steps = [
-{title:"Basics",color:"bg-purple-100"},
-{title:"Techniques",color:"bg-blue-100"},
-{title:"Advanced",color:"bg-green-100"},
-{title:"Applications",color:"bg-yellow-100"}
+{title:"Basics",color:"purple"},
+{title:"Techniques",color:"blue"},
+{title:"Advanced",color:"green"},
+{title:"Applications",color:"yellow"}
 ]
 
 return(
 
-<section className="py-20 bg-white">
+<section className="roadmap-section">
 
-<div className="max-w-6xl mx-auto px-6">
+<div className="roadmap-container">
 
-<h2 className="text-3xl font-bold text-center mb-12">
+<h2 className="roadmap-title">
 Prompt Engineering Roadmap
 </h2>
 
-<div className="grid md:grid-cols-4 gap-6 text-center">
+<div className="roadmap-grid">
 
 {steps.map((step,i)=>(
 
-<div key={i}
-className={`${step.color} p-6 rounded-xl font-semibold
-shadow hover:shadow-xl hover:-translate-y-1
-transition duration-300`}>
+<div
+key={i}
+className={`roadmap-card ${step.color}`}
+>
 
 Step {i+1}
 
-<div className="mt-2 text-lg">
+<div className="roadmap-step">
 {step.title}
 </div>
 

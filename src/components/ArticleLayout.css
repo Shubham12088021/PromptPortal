@@ -1,0 +1,51 @@
+.article-container{
+  max-width:900px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.article-title{
+  font-size:36px;
+  font-weight:bold;
+  margin-bottom:25px;
+  color:#7e22ce;
+}
+
+.article-content{
+  font-size:18px;
+  line-height:1.8;
+}
+
+/* spacing for elements inside article */
+
+.article-content p{
+  margin-bottom:18px;
+}
+
+.article-content h2{
+  font-size:26px;
+  margin-top:25px;
+  margin-bottom:12px;
+}
+
+.article-content h3{
+  font-size:22px;
+  margin-top:20px;
+  margin-bottom:10px;
+}
+
+.article-content ul{
+  padding-left:20px;
+  margin-bottom:20px;
+}
+
+.article-content li{
+  margin-bottom:8px;
+}
+
+.article-content code{
+  background:#f3f4f6;
+  padding:4px 6px;
+  border-radius:4px;
+  font-family:monospace;
+}

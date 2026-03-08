@@ -1,0 +1,63 @@
+.ai-tools-section{
+  padding:80px 20px;
+  background:linear-gradient(to bottom,#f3f4f6,#e5e7eb);
+}
+
+.ai-tools-container{
+  max-width:1200px;
+  margin:auto;
+}
+
+.ai-tools-title{
+  text-align:center;
+  font-size:32px;
+  font-weight:bold;
+  margin-bottom:50px;
+}
+
+.ai-tools-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+}
+
+.ai-tool-card{
+  background:white;
+  padding:35px;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  text-align:center;
+  cursor:pointer;
+  transition:all 0.3s ease;
+}
+
+.ai-tool-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.ai-tool-icon{
+  display:flex;
+  justify-content:center;
+  margin-bottom:15px;
+  color:#9333ea;
+}
+
+.ai-tool-name{
+  font-size:18px;
+  font-weight:600;
+}
+
+/* responsive */
+
+@media(max-width:900px){
+  .ai-tools-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:500px){
+  .ai-tools-grid{
+    grid-template-columns:1fr;
+  }
+}

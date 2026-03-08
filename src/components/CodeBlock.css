@@ -1,0 +1,22 @@
+.codeblock-container{
+  position:relative;
+  margin:30px 0;
+}
+
+.codeblock-pre{
+  background:black;
+  color:#22c55e;
+  padding:16px;
+  border-radius:8px;
+  overflow-x:auto;
+  font-size:14px;
+  font-family:monospace;
+}
+
+.codeblock-label{
+  position:absolute;
+  top:8px;
+  right:12px;
+  font-size:12px;
+  color:#9ca3af;
+}

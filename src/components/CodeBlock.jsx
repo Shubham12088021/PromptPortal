@@ -1,10 +1,12 @@
+import "./CodeBlock.css";
+
 function CodeBlock({ code }) {
 
   return (
 
-    <div className="relative my-6">
+    <div className="codeblock-container">
 
-      <pre className="bg-black text-green-400 p-4 rounded-lg overflow-x-auto text-sm">
+      <pre className="codeblock-pre">
 
         <code>
           {code}
@@ -12,7 +14,7 @@ function CodeBlock({ code }) {
 
       </pre>
 
-      <span className="absolute top-2 right-3 text-xs text-gray-400">
+      <span className="codeblock-label">
         code
       </span>
 

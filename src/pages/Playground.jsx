@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Playground.css";
 
 function Playground() {
 
@@ -24,9 +25,9 @@ function Playground() {
 
   return (
 
-    <div className="max-w-5xl mx-auto p-10">
+    <div className="playground-page">
 
-      <h1 className="text-3xl font-bold mb-6">
+      <h1 className="playground-title">
         Prompt Playground
       </h1>
 
@@ -34,21 +35,21 @@ function Playground() {
         value={prompt}
         onChange={(e) => setPrompt(e.target.value)}
         placeholder="Write your AI prompt..."
-        className="w-full h-40 p-4 border rounded-lg mb-4 focus:outline-purple-500"
+        className="playground-textarea"
       />
 
       <button
         onClick={generateResponse}
-        className="px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition"
+        className="playground-button"
       >
         {loading ? "Generating..." : "Generate"}
       </button>
 
       {response && (
 
-        <div className="mt-6 p-4 border rounded-lg bg-gray-100 dark:bg-gray-800">
+        <div className="playground-response">
 
-          <h3 className="font-semibold mb-2">
+          <h3>
             AI Response
           </h3>
 

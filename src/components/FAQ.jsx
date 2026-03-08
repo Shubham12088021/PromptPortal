@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import "./FAQ.css";
 
 function FAQ() {
 
@@ -29,54 +30,36 @@ function FAQ() {
 
   return (
 
-    <section className="py-20 bg-gradient-to-b from-gray-100 to-gray-200">
+    <section className="faq-section">
 
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="faq-container">
 
-        <h2 className="text-3xl font-bold text-center mb-12">
+        <h2 className="faq-title">
           Frequently Asked Questions
         </h2>
 
-        <div className="space-y-5">
+        <div className="faq-list">
 
           {faqs.map((faq, index) => (
 
-            <div
-              key={index}
-              className="group bg-white/80 backdrop-blur-md
-              border border-transparent
-              hover:border-purple-400
-              rounded-xl shadow-md hover:shadow-xl
-              transition duration-300"
-            >
-
-              {/* QUESTION */}
+            <div key={index} className="faq-card">
 
               <button
                 onClick={() => toggle(index)}
-                className="w-full flex justify-between items-center
-                p-6 text-left font-semibold text-lg cursor-pointer"
+                className="faq-question"
               >
 
                 {faq.question}
 
                 <FaChevronDown
-                  className={`transition-transform duration-300
-                  ${active === index ? "rotate-180 text-purple-600" : ""}`}
+                  className={`faq-icon ${active === index ? "rotate" : ""}`}
                 />
 
               </button>
 
-              {/* ANSWER */}
+              <div className={`faq-answer ${active === index ? "active" : ""}`}>
 
-              <div
-                className={`overflow-hidden transition-all duration-500
-                ${active === index ? "max-h-40 px-6 pb-6 opacity-100"
-                                   : "max-h-0 opacity-0"}
-                `}
-              >
-
-                <p className="text-gray-600 leading-relaxed">
+                <p>
                   {faq.answer}
                 </p>
 

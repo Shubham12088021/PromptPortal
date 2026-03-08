@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
-import { FaBook, FaLightbulb, FaCode, FaFlask } from "react-icons/fa";
+import { FaBook, FaLightbulb, FaCode } from "react-icons/fa";
+import "./Sidebar.css";
 
 function Sidebar() {
 
@@ -13,17 +14,17 @@ function Sidebar() {
 
   return (
 
-    <aside className="w-64 min-h-screen bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-700 p-6">
+    <aside className="sidebar">
 
       {/* Title */}
 
-      <h2 className="text-lg font-bold mb-6 text-purple-600">
+      <h2 className="sidebar-title">
         Prompt Docs
       </h2>
 
       {/* Navigation */}
 
-      <div className="flex flex-col gap-2">
+      <div className="sidebar-links">
 
         {links.map((item) => {
 
@@ -34,14 +35,10 @@ function Sidebar() {
             <Link
               key={item.path}
               to={item.path}
-              className={`flex items-center gap-3 px-4 py-2 rounded-lg transition
-              ${active
-                ? "bg-purple-600 text-white shadow"
-                : "text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-gray-800"
-              }`}
+              className={`sidebar-link ${active ? "active" : ""}`}
             >
 
-              <span className="text-sm">
+              <span className="sidebar-icon">
                 {item.icon}
               </span>
 

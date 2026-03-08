@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "./CommandPalette.css";
 
 function CommandPalette() {
 
@@ -44,16 +45,16 @@ function CommandPalette() {
 
   return (
 
-    <div className="fixed inset-0 bg-black/50 flex items-start justify-center pt-40 z-50">
+    <div className="command-overlay">
 
-      <div className="bg-white rounded-xl w-[500px] shadow-xl overflow-hidden">
+      <div className="command-box">
 
         <input
           type="text"
           placeholder="Search pages..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="w-full p-4 border-b outline-none"
+          className="command-input"
         />
 
         <div>
@@ -66,7 +67,7 @@ function CommandPalette() {
                 navigate(item.path);
                 setOpen(false);
               }}
-              className="px-4 py-3 hover:bg-gray-100 cursor-pointer"
+              className="command-item"
             >
 
               {item.name}
